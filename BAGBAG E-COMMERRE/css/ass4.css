@@ -1,0 +1,1374 @@
+.popular-bags {
+    width: 100%;
+    height: auto;
+    padding: 20px 15px;
+    background-color: #1a1a1a; /* Dark background with slight texture */
+    border-radius: 8px;
+}
+
+.popular-bags h2 {
+    color: #f2f2f2;
+    font-family: "Anton", sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.popular-bags p {
+    color: #d9d9d9;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 16px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: #333; */
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 1rem;
+    box-sizing: border-box;
+    height: 320px; /* Adjust as needed */
+}
+.category-card a{
+    text-decoration: none;
+}
+
+.category-card a:hover{
+    text-decoration: none;
+}
+.card .img-box {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+}
+
+.card .img-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    aspect-ratio: 4/4;
+    border-radius: 4px;
+}
+
+.card .card-body {
+    width: 100%;
+    font-size: 19px;
+    text-align: center;
+    /* color: white; */
+    color: black;
+}
+
+.card .card-title {
+    font-size: 18px;
+    /* color: white; */
+    color: black;
+    margin-top: 0.5rem;
+}
+
+/* Explore Card Styling */
+.explore-card {
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.modal-card-img {
+    padding: 15px;
+}
+
+.modal-card-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.modal-card-content {
+    padding: 20px;
+    color: #fff;
+}
+
+.modal-card-content h2 {
+    text-align: left;
+    font-size: 2rem;
+    font-family: "Anton", sans-serif;
+    font-weight: 800;
+    color: #f5f5f5;
+    margin-bottom: 1rem;
+}
+
+.modal-card-content p {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+}
+
+.modal-card-content button {
+    width: 160px;
+    margin: 10px;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effects */
+.modal-card-content .btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.modal-card-content .btn-secondary:hover {
+    background-color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-card-content {
+        padding: 15px;
+    }
+
+    .modal-card-content h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .modal-card-content p {
+        text-align: center;
+    }
+    
+    .modal-card-content button {
+        width: 140px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .explore-card {
+        padding: 15px;
+    }
+
+    .modal-card-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-card-content p {
+        font-size: 0.9rem;
+    }
+
+    .modal-card-content button {
+        width: 130px;
+        font-size: 0.85rem;
+    }
+}
+/* Parent Container Styling */
+.parent-services-container {
+    width: 100%;
+    background-color: #1a1717;
+    padding: 50px 0;
+}
+
+/* Services Container Styling */
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    padding: 0 15px;
+}
+
+/* Individual Service Box Styling */
+.services-content {
+    width: 30%;
+    background-color: #2a2929;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.services-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.service-icon {
+    height: 80px;
+    width: 80px;
+    background-color: #fbd3c3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.service-icon i {
+    font-size: 30px;
+    color: #d32f2f;
+}
+
+/* Heading Styling */
+.services-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+/* Paragraph Styling */
+.services-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+/* Link Styling */
+.services-content a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #d32f2f;
+    transition: color 0.3s ease-in-out;
+}
+
+.services-content a:hover {
+    color: #ff6f61;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .services-content {
+        width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-content {
+        width: 100%;
+    }
+
+    .services-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .services-content p {
+        font-size: 0.9rem;
+    }
+
+    .services-content a {
+        font-size: 0.9rem;
+    }
+}
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Improved background color for contrast */
+}
+
+/* Container */
+.sell-sec-container {
+    background-color: #1a1a1a; /* Dark background for contrast */
+    width: 100%;
+    padding: 40px 20px; /* Increased padding for better spacing */
+}
+
+/* Heading */
+.sell-sec-container h1 {
+    margin-top: 0; /* Removed top margin */
+    font-size: 2.5rem; /* Responsive font size */
+    font-weight: 700; /* Adjusted weight for better readability */
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px; /* Added bottom margin */
+}
+
+/* Sell Section */
+.sell-sec {
+    background-color: #222;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start for better visual consistency */
+    gap: 20px; /* Added gap between cards */
+    /* overflow: hidden; Hide overflow to prevent horizontal scroll */
+}
+
+/* Sell Card */
+.sell-card {
+    background-color: #2a2a2a; /* Slightly lighter background for cards */
+    border: 1px solid #444; /* Darker border for better contrast */
+    border-radius: 8px; /* Rounded corners for modern look */
+    width: 100%;
+    max-width: 300px; /* Limit max width for cards */
+    margin: 0 auto; /* Center align cards */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Added shadow for better depth */
+    overflow: hidden;
+}
+
+
+.sell-img-box{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+/* Image */
+.sell-card img {
+    width: 100%;
+    overflow: hidden;
+    height: 300px; /* Adjust height to maintain aspect ratio */
+    object-fit: contain;
+    aspect-ratio: 4/4;
+    border-bottom: 1px solid #444; /* Separator line between image and text */
+}
+
+/* Title */
+.sell-card h4 {
+    font-size: 1.25rem; /* Responsive font size */
+    font-weight: 600; /* Adjusted weight for better readability */
+    text-align: center; /* Center align text */
+    margin: 10px 0; /* Added margin */
+    overflow: hidden;
+}
+
+/* Price */
+.sell-card p {
+    font-size: 1rem; /* Responsive font size */
+    overflow: hidden;
+    color: #cccccc; /* Lighter color for price */
+    text-align: center; /* Center align text */
+    margin: 5px 0; /* Added margin */
+}
+
+/* Ratings */
+.sell-card span {
+    overflow: hidden;
+    font-size: 1rem; /* Adjusted font size for consistency */
+    color: #ffd700; /* Gold color for stars */
+}
+
+.checked {
+    color: #ffd700; /* Gold color for checked stars */
+    overflow: hidden;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .sell-card {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .sell-sec-container {
+        padding: 20px 10px; /* Adjust padding for smaller screens */
+    }
+    .sell-sec{
+        background-color: #222;
+    }
+
+    .sell-sec-container h1 {
+        font-size: 1.8rem; /* Smaller font size for headings */
+    }
+
+    .sell-card {
+        max-width: 100%; /* Full width on very small screens */
+    }
+}
+.branches-container {
+    width: 100vw;
+    height: 30rem;
+    background-color: rgb(36, 30, 30);
+    margin: 0px -40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.branches-content {
+    width: 30%;
+    height: 65%;
+    margin-top: 4%;
+    float: none; /* Remove float and use flex for responsiveness */
+    text-align: center;
+}
+
+.branches-content:nth-child(2) {
+    border-left: .01rem solid whitesmoke;
+    border-right: .01rem solid whitesmoke;
+}
+
+.branches-content h1 {
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    font-size: 8rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.branches-content p {
+    text-align: center;
+    color: white;
+    font-size: 2.4rem;
+    margin: 0 auto;
+}
+
+/* Media queries for different screen sizes */
+
+@media (max-width: 1200px) {
+    .branches-content {
+        width: 40%; /* Adjust width for medium screens */
+    }
+    .branches-content h1 {
+        font-size: 6rem; /* Smaller font sizes */
+    }
+    .branches-content p {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .branches-content {
+        width: 100%; /* Stack the branches on smaller screens */
+        height: auto;
+        margin-top: 2%;
+        border-left: none;
+        border-right: none;
+    }
+    .branches-content h1 {
+        font-size: 4rem; /* Further reduce font size */
+    }
+    .branches-content p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .branches-container {
+        margin: 0;
+    }
+    .branches-content h1 {
+        font-size: 3rem; /* Font adjustments for very small screens */
+    }
+    .branches-content p {
+        font-size: 1.4rem;
+    }
+}
+.team-sec {
+    width: 100%;
+    background-color: rgb(26, 23, 23);
+}
+
+.team-sec h1 {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+    margin: 12px 0px;
+    color: white;
+}
+
+.team-sec p {
+    font-size: 16px;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 500;
+}
+
+.sellers-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.best-sellers {
+    width: 20%;
+    height: 50rem;
+    background-color: rgb(36, 30, 30);
+    margin: 2rem;
+    border: 0.02rem solid silver;
+}
+
+.best-sellers-pic {
+    width: 100%;
+    height: 75%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.best-sellers-pic img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.best-sellers h5 {
+    font-size: 20px;
+    font-weight: 400px;
+    text-align: center;
+    color: white;
+}
+
+.best-sellers p {
+    font-size: 15px;
+    color: whitesmoke;
+    font-weight: 300px;
+    text-align: center;
+}
+
+.best-sellers i {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.social-media-icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 30px;
+}
+
+/* --------------------- foter ---------------  */
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    background-color: rgb(26, 23, 23); /* Dark background */
+    color: white;
+    padding: 40px 20px; /* Increased padding for better spacing */
+    border-top: 1px solid silver; /* Border at the top */
+}
+
+footer h2 {
+    font-size: 1.90rem; /* Responsive font size */
+    font-weight: 700; /* Adjusted weight for better readability */
+    text-align: center;
+    margin-bottom: 20px; /* Space below heading */
+}
+
+footer p {
+    text-align: center;
+    font-size: 1rem; /* Slightly smaller font size for the paragraph */
+    margin-top: 10px; /* Space above paragraph */
+}
+
+/* Links */
+footer a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem; /* Consistent font size for links */
+    display: block;
+    margin: 5px 0; /* Space between links */
+}
+
+footer a:hover {
+    color: #f0f0f0; /* Lighter color on hover */
+    text-shadow: 1px 1px 3px orange; /* Subtle text shadow */
+}
+
+/* List Styles */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin: 10px 0; /* Space between list items */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+    
+    footer h2 {
+        font-size: 1.5rem; /* Smaller heading font size on small screens */
+    }
+    
+    footer a {
+        font-size: 0.75rem; /* Smaller font size for links on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 20px 5px; /* Further adjustment for very small screens */
+    }
+    
+    footer h2 {
+        font-size: 1.25rem; /* Even smaller heading font size */
+    }
+    
+    footer a {
+        font-size: 0.75rem; /* Consistent link font size */
+    }
+}
+
+@media (max-width:350px) {
+    .order-banner {
+        width: 100%;
+        height: 20rem;
+        padding: 2rem;
+    }
+
+    .order-banner h2 {
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 5px;
+    }
+
+    .order-banner p {
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    .order-banner button {
+        max-width: 100px;
+        font-size: 12px;
+    }
+
+    .services-container {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+
+    .services-content {
+        width: 30%;
+        height: 100%;
+    }
+
+    .service-icon {
+        height: 25px;
+        width: 25px;
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .service-icon i {
+        font-size: 10px;
+    }
+
+    .services-content h1 {
+        font-size: 9px;
+        margin-bottom: 10px;
+    }
+
+    .services-content p {
+        font-size: 6px;
+        font-weight: 200;
+    }
+
+    .services-content a {
+        font-size: 6px;
+    }
+
+    .sell-sec {
+        width: 100%;
+        height: auto;
+        background-color: #222;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        overflow-x: hidden;
+    }
+
+    .sell-card {
+        width: 100%;
+        margin-top: 6%;
+        margin-left: 1.5rem;
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+    .branches-container{
+        width: 100vw;
+    }
+    .branches-content {
+        width: 30%;
+        height: 65%;
+        margin-top: 4%;
+        float: left;
+    }
+
+    .branches-content:nth-child(2) {
+        border-left: .01rem solid whitesmoke;
+        border-right: .01rem solid whitesmoke;
+    }
+
+    .branches-content h1 {
+        font-size: 10px;
+        margin-top: .5rem;
+    }
+
+    .branches-content p {
+        font-size: 3px;
+    }
+
+    .team-sec h1 {
+        font-size: 10px;
+        font-weight: 400;
+        margin: 5px 0px;
+    }
+
+    .team-sec p {
+        font-size: 6px;
+        font-weight: 400;
+    }
+
+    .sellers-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .best-sellers {
+        width: 100%;
+        height: 15rem;
+        margin: .3rem;
+    }
+
+    .best-sellers-pic {
+        width: 100%;
+        height: 75%;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .best-sellers-pic img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .best-sellers h5 {
+        font-size: 7px;
+    }
+
+    .best-sellers p {
+        font-size: 3px;
+    }
+
+    .best-sellers i {
+        font-size: 10px;
+    }
+
+    .social-media-icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 7px;
+    }
+
+}
+
+
+@media (min-width: 350px) and (max-width:480px) {
+
+    .order-banner {
+        width: 100%;
+        height: 20rem;
+        padding: 5px;
+    }
+
+    .order-banner h2 {
+        margin-top: 20px;
+        font-size: 21px;
+        font-weight: 800;
+        margin-top: 15px;
+        font-family: "Oswald", sans-serif;
+
+    }
+
+    .order-banner p {
+        font-size: 12px;
+        color: white;
+        font-weight: 500;
+        font-family: "Oswald", sans-serif;
+    }
+
+    .order-banner button {
+        max-width: 100px;
+        font-size: 12px;
+    }
+
+    .services-container {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+
+    .services-content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .service-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .service-icon i {
+        font-size: 12px;
+    }
+
+    .services-content h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .services-content p {
+        font-size: 10px;
+        font-weight: 200;
+    }
+
+    .services-content a {
+        font-size: 8px;
+    }
+
+    .sell-sec {
+        width: 100%;
+        height: auto;
+        background-color: #222;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        overflow-x: hidden;
+    }
+
+    .sell-card {
+        width: 100%;
+        margin-top: 6%;
+        margin-left: 1.5rem;
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+
+
+    .branches-container{
+        width: 100vw;
+    }
+    .branches-content {
+        width: 100%;
+        height: auto;
+        margin-top: 4%;
+        float: none;
+    }
+
+    .branches-content:nth-child(2) {
+        border-top: .01rem solid whitesmoke;
+        border-bottom: .01rem solid whitesmoke;
+        border-right: 0px;
+        border-left: 0px;
+        padding: 10px 2px;
+    }
+
+    .branches-content h1 {
+        font-size: 55px;
+        margin-top: .5rem;
+    }
+
+    .branches-content p {
+        font-size: 25px;
+    }
+
+    .team-sec h1 {
+        font-size: 25px;
+        font-weight: 800;
+        margin: 5px 0px;
+    }
+
+    .team-sec p {
+        font-size: 9px;
+        font-weight: 400;
+    }
+
+    .sellers-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .best-sellers {
+        width: 100%;
+        height: auto;
+        margin: .3rem;
+    }
+
+    .best-sellers-pic {
+        width: 100%;
+        height: 75%;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .best-sellers-pic img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .best-sellers h5 {
+        font-size: 16px;
+    }
+
+    .best-sellers p {
+        font-size: 10px;
+    }
+
+    .best-sellers i {
+        font-size: 20px;
+    }
+
+    .social-media-icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 7px;
+    }
+
+}
+
+
+@media (min-width:481px) and (max-width:720px) {
+
+    .order-banner {
+        width: 100%;
+        height: 20rem;
+        padding: 5px;
+    }
+
+    .order-banner h2 {
+        margin-top: 30px;
+        font-size: 25px;
+        font-weight: 800;
+        margin-top: 15px;
+        font-family: "Oswald", sans-serif;
+    }
+
+    .order-banner p {
+        font-size: 15px;
+        color: white;
+        font-weight: 500;
+        font-family: "Oswald", sans-serif;
+    }
+
+    .order-banner button {
+        max-width: 100px;
+        font-size: 12px;
+    }
+
+    .services-container {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* flex-direction: column; */
+        padding: 15px 10px;
+    }
+
+    .services-content {
+        width: 30%;
+        height: 100%;
+    }
+
+    .service-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .service-icon i {
+        font-size: 14px;
+    }
+
+    .services-content h1 {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .services-content p {
+        font-size: 12px;
+        font-weight: 200;
+    }
+
+    .services-content a {
+        font-size: 12px;
+    }
+
+    .sell-sec {
+        width: 100%;
+        height: 33rem;
+        background-color: #222;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow-x: auto;
+    }
+
+    .sell-card {
+        width: 20%;
+        margin-top: 6%;
+        margin-left: 1.5rem;
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+
+    .sell-card img {
+        width: 90%;
+        height: 350px;
+        aspect-ratio: 1/4;
+        object-fit: contain;
+    }
+
+    .sell-card h4 {
+        font-size: 18px;
+    }
+
+    .sell-card p {
+        font-size: 14px;
+        color: gray;
+    }
+
+    .branches-container {
+        width: 100%;
+        height: 140px;
+    }
+
+    .branches-content {
+        width: 30%;
+        height: 120px;
+        margin-top: 4%;
+        float: left;
+    }
+
+    .branches-content:nth-child(2) {
+        border-right: .01rem solid whitesmoke;
+        border-left: .01rem solid whitesmoke;
+        border-top: 0px;
+        border-bottom: 0px;
+        padding: 10px 2px;
+    }
+
+    .branches-content h1 {
+        font-size: 35px;
+        margin-top: .5rem;
+    }
+
+    .branches-content p {
+        font-size: 20px;
+    }
+
+    .team-sec h1 {
+        font-size: 25px;
+        font-weight: 800;
+        margin: 5px 0px;
+    }
+
+    .team-sec p {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .sellers-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* flex-direction: column; */
+    }
+
+    .best-sellers {
+        width: 100%;
+        height: auto;
+        margin: .3rem;
+    }
+
+    .best-sellers-pic {
+        width: 100%;
+        height: 75%;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .best-sellers-pic img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .best-sellers h5 {
+        font-size: 16px;
+    }
+
+    .best-sellers p {
+        font-size: 10px;
+    }
+
+    .best-sellers i {
+        font-size: 20px;
+    }
+
+    .social-media-icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 7px;
+    }
+
+}
+
+
+@media (min-width:721px) and (max-width:1080px) {
+
+    .order-banner {
+        width: 100%;
+        height: 20rem;
+        padding: 5px;
+    }
+
+    .order-banner h2 {
+        margin-top: 30px;
+        font-size: 25px;
+        font-weight: 800;
+        margin-top: 15px;
+        font-family: "Oswald", sans-serif;
+    }
+
+    .order-banner p {
+        font-size: 15px;
+        color: white;
+        font-weight: 500;
+        font-family: "Oswald", sans-serif;
+    }
+
+    .order-banner button {
+        max-width: 100px;
+        font-size: 12px;
+    }
+
+    .services-container {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* flex-direction: column; */
+        padding: 15px 10px;
+    }
+
+    .services-content {
+        width: 30%;
+        height: 100%;
+    }
+
+    .service-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .service-icon i {
+        font-size: 14px;
+    }
+
+    .services-content h1 {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .services-content p {
+        font-size: 12px;
+        font-weight: 200;
+    }
+
+    .services-content a {
+        font-size: 12px;
+    }
+
+    .sell-sec {
+        width: 100%;
+        height: 33rem;
+        background-color: #222;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow-x: auto;
+    }
+
+    .sell-card {
+        width: 50%;
+        margin-top: 6%;
+        margin-left: 1.5rem;
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+
+    .sell-card img {
+        width: 90%;
+        height: 350px;
+        aspect-ratio: 1/4;
+        object-fit: contain;
+    }
+
+    .sell-card h4 {
+        font-size: 18px;
+    }
+
+    .sell-card p {
+        font-size: 14px;
+        color: gray;
+    }
+
+    .branches-container {
+        width: 100%;
+        height: 140px;
+    }
+
+    .branches-content {
+        width: 30%;
+        height: 120px;
+        margin-top: 4%;
+        float: left;
+    }
+
+    .branches-content:nth-child(2) {
+        border-right: .01rem solid whitesmoke;
+        border-left: .01rem solid whitesmoke;
+        border-top: 0px;
+        border-bottom: 0px;
+        padding: 10px 2px;
+    }
+
+    .branches-content h1 {
+        font-size: 35px;
+        margin-top: .5rem;
+    }
+
+    .branches-content p {
+        font-size: 20px;
+    }
+
+    .team-sec h1 {
+        font-size: 25px;
+        font-weight: 800;
+        margin: 5px 0px;
+    }
+
+    .team-sec p {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .sellers-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* flex-direction: column; */
+    }
+
+    .best-sellers {
+        width: 100%;
+        height: auto;
+        margin: .3rem;
+    }
+
+    .best-sellers-pic {
+        width: 100%;
+        height: 75%;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .best-sellers-pic img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .best-sellers h5 {
+        font-size: 16px;
+    }
+
+    .best-sellers p {
+        font-size: 10px;
+    }
+
+    .best-sellers i {
+        font-size: 20px;
+    }
+
+    .social-media-icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 7px;
+    }
+}
+
+
+@media (min-width:1081px) and (max-width:2160px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+
+@media (min-width:2161px) and (max-width: 4220px) {
+    html {
+        font-size: 65%;
+    }
+}

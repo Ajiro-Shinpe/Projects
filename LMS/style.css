@@ -1,0 +1,26 @@
+*{
+    font-family: cursive;
+    color: white;
+    font-size: 12px;
+}
+
+body{
+    background-color: rgb(8, 47, 80);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    padding: 50px 60px;
+    border: 1px solid silver;
+    margin-top: 40px;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: 800;
+}
+input:focus{
+    color: black;
+}

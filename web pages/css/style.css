@@ -1,0 +1,640 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.bknow{
+    background-color: black;
+}
+.bknow a {
+    color: white;
+}
+.slider {
+    height: 500px;
+    color: white;
+    padding-top: 150px;
+    padding-left: 120px;
+    background-size: cover;
+    background-position: center;
+}
+.slider1 { background-image: url('/img/village.jpg'); }
+.slider2 { background-image: url('/img/tokyo.jpg'); }
+.slider3 { background-image: url('/img/fsmsjd.jpg'); }
+.carousel p { color: white; }
+.popdest { background-color: #f9f9f9; padding: 2rem; }
+.gtbhp {
+    width: 60%;
+    height: 250px;
+    border: 0.2px solid silver;
+    margin: 20px auto;
+    padding: 30px;
+}
+
+.gtbhp2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.hntnp {
+    margin: 20px auto;
+}
+
+.cardsh3 {
+    padding: 20px;
+}
+
+.card {
+    transition: transform 0.5s linear;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.batwlyh {
+    width: 100%;
+    height: auto;
+    background-image: url(/img/boat\ port.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    color: white;
+}
+
+.bath3 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cardsh3 {
+        padding: 10px;
+    }
+
+    .batwlyh {
+        padding: 20px;
+        background-position: center;
+    }
+
+    .bath3 {
+        font-size: 1.5em;
+    }
+
+    .card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .bath3 {
+        font-size: 1.3em;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .gtbhp {
+        width: 100%;
+    }
+}
+
+/* General adjustments for smaller screens */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cardsh3,
+.batwlyh,
+.xnt,
+.hd {
+    padding: 0 15px;
+}
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 300px; /* allows cards to resize flexibly */
+    max-width: 300px;
+    margin: 15px;
+    transition: 500ms linear;
+}
+
+.batwlyh {
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.bath3 {
+    font-size: 2rem;
+}
+
+.xnt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.trvlngpoln,
+.trvlngcont {
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px;
+}
+
+.trvlngpoln {
+    background-size: cover;
+    height: 300px;
+}
+
+.trvlngcont {
+    padding: 20px;
+    text-align: center;
+}
+
+.hd {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding: 15px;
+}
+
+.con {
+    flex: 1 1 250px; /* responsive width */
+    max-width: 250px;
+    margin: 10px;
+    transition: 500ms linear;
+}
+
+/* Individual Icon Container Adjustments */
+.plane, .bed, .thumb {
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(251, 211, 195);
+    border-radius: 50%;
+}
+
+/* Responsive Typography */
+.card-title,
+.hh {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.hp {
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Buttons */
+button {
+    margin: 5px;
+    padding: 10px 20px;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .xnt, .hd, .card-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .batwlyh, .trvlngcont {
+        text-align: center;
+    }
+
+    .card-title,
+    .bath3 {
+        font-size: 1.8rem;
+    }
+
+    .hp, .rm {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .batwlyh {
+        height: auto;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .plane, .bed, .thumb {
+        height: 40px;
+        width: 40px;
+    }
+
+    .bath3 {
+        font-size: 1.5rem;
+    }
+
+    .card-title,
+    .hh {
+        font-size: 1.2rem;
+    }
+}
+
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Styles */
+.sec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: white;
+}
+
+.box {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.img-container {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+.stars .fa-star.checked {
+    color: gold;
+}
+
+.stars .fa-star {
+    color: gray;
+}
+
+p {
+    color: gray;
+    font-size: 0.9rem;
+}
+
+/* Footer Section */
+.foot {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: rgb(4, 18, 38);
+    color: white;
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.stat p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sec {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .box {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 90%;
+    }
+    
+    .foot {
+        flex-direction: column;
+    }
+}
+.owndtm {
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 30px;
+}
+
+.teamembr {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    align-items: center;
+    justify-content: center;
+}
+
+.tmembrs {
+    width: 220px; /* Fixed width for smaller devices */
+    height: 450px;
+    background-color: white;
+    margin: 15px;
+    border: 0.2px solid silver;
+    transition: 500ms linear;
+    flex: 1 1 200px; /* Allows items to grow/shrink based on screen size */
+    max-width: 25%; /* Maximum width for larger screens */
+}
+
+.tmembrs:hover {
+    transform: scale(1.05);
+}
+
+.tmbrpics {
+    width: 100%;
+    height: 60%;
+    background-color: white;
+}
+
+.pic1 {
+    background-image: url("/img/chris\ tina.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.pic2 {
+    background-image: url("/img/morata.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.pic3 {
+    background-image: url("/img/anton\ brown.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.pic4 {
+    background-image: url("/img/akachi.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.mainsoc {
+    display: flex;
+    justify-content: center; /* Centers the icons */
+    margin: 10px 0; /* Adds space above and below the icons */
+}
+
+.socmedicn {
+    margin: 0 5px; /* Adjust margins to space out the icons evenly */
+    display: flex;
+    align-items: center; /* Centers icons vertically */
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+    .tmembrs {
+        max-width: 90%; /* Take full width on smaller devices */
+    }
+}
+.clsay {
+    width: 100%;
+    height: auto; /* Change to auto for better adaptability */
+    background-color: white;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+#clsayh1 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.5rem; /* Responsive font size */
+    margin: 20px 0; /* Adjusted margin */
+    font-style: initial;
+}
+
+.inercs {
+    display: flex;
+    align-items: flex-start; /* Align items to the start */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    margin-top: 20px;
+}
+
+.clntsay {
+    width: 320px;
+    height: auto; /* Change to auto for flexibility */
+    background-color: whitesmoke;
+    margin: 10px;
+    border: 0.2px solid silver;
+    padding: 15px;
+    transition: 500ms linear;
+    flex: 1 1 300px; /* Allow the cards to grow and shrink */
+}
+
+.clntsay:hover {
+    transform: scale(1.05); /* Slightly reduce scale for hover */
+}
+
+.dp1, .dp2, .dp3 {
+    width: 50px;
+    height: 50px;
+    margin-top: 0px; /* Reduced margin */
+    background-color: darkcyan;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.dp1 {
+    background-image: url("/img/shinpe.jpeg");
+}
+
+.dp2 {
+    background-image: url("/img/luffy.png");
+}
+
+.dp3 {
+    background-image: url("/img/itachi.jpeg");
+}
+.main1dp, .main2dp, .main3dp {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+}
+
+.hnp1, .hnp2, .hnp3 {
+    margin-left: 10px; /* Reduced margin for better spacing */
+}
+
+
+/* Media Query for Smaller Devices */
+@media (max-width: 768px) {
+    #clsayh1 {
+        font-size: 2rem; /* Slightly smaller font size on mobile */
+    }
+
+    .clntsay {
+        width: 90%; /* Make the client say cards full width */
+        margin: 10px auto; /* Centering on small screens */
+    }
+}
+.footer2 {
+    width: 100%;
+    background-color: rgb(6, 25, 52);
+    color: white;
+    padding: 40px 20px; /* Adjusted padding for better spacing */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of footer items */
+    justify-content: space-between; /* Space between items */
+}
+
+.ft2 {
+    flex: 1; /* Allow footer sections to grow */
+    min-width: 200px; /* Minimum width for each section */
+    margin: 10px; /* Added margin for spacing */
+}
+
+.ft2 h2, .ft2 h3 {
+    margin-bottom: 15px; /* Space between heading and paragraphs */
+}
+
+.ft2 p {
+    margin: 5px 0; /* Space between paragraphs */
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.ft2 p:hover {
+    color: #ffa500; /* Change color on hover */
+}
+
+.plchldr {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px; /* Rounded corners for input */
+    overflow: hidden; /* Ensure the svg doesn't overflow */
+    width: 100%; /* Full width */
+    margin-top: 10px; /* Space above */
+}
+
+.plchldr input {
+    border: none;
+    padding: 10px; /* Added padding for input */
+    flex: 1; /* Allow input to grow */
+}
+
+.plchldr svg {
+    margin: 0 10px; /* Space around SVG */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+@media (max-width: 768px) {
+    .footer2 {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .ft2 {
+        width: 100%; /* Full width for each section */
+    }
+}
+
+/* 
+
+@media(max-width:360px) {
+    html {
+        font-size: 25%;
+    }
+
+}
+
+
+@media (min-width: 361px) and (max-width:480px) {
+    html {
+        font-size: 35%;
+    }
+
+}
+
+@media (min-width:481px) and (max-width:720px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media (min-width:721px) and (max-width:1080px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+
+@media (min-width:1081px) and (max-width:2160px) {
+    html {
+        font-size: 65%;
+    }
+}
+
+
+@media (min-width:2161px) and (max-width: 4220px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+
+
+
+/* 
+
+@media (max-width:998px)
+{
+    html{
+        font-size: 55%;
+    }
+    
+}
+
+
+
+@media (max-width:768px)
+{
+    html{
+        font-size: 45%;
+    }
+    
+} */ 
