@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2024 at 07:59 AM
+-- Generation Time: Nov 28, 2024 at 08:36 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -104,7 +104,9 @@ INSERT INTO `portfolio` (`id`, `title`, `category`, `url`, `desc`, `date`) VALUE
 (4, 'Sucii (Socializing and Ally) - Social Networking Website', 2, '#', 'Designed and developed a feature-rich social networking website, enabling users to connect, share, and interact with each other. Key features include:\r\n\r\n- User and Admin Authentication: Implemented secure login and registration systems for users and administrators.\r\n- Email Verification: Added an email verification process to ensure user authenticity.\r\n- User Profile Management: Allowed users to create and customize their profiles.\r\n- Image Posting: Enabled users to post images.\r\n- Like, Comment, and Engagement: Implemented features for users to like, comment, and engage with each other\'s posts.\r\n- Follow and Unfollow: Allowed users to follow and unfollow each other. -Chat sys : Real time User to user chat system\r\n\r\nTechnologies Used: [List the technologies you used, e.g., HTML, CSS, JavaScript, BootStrap , JQuery PHP, MySQL,  & AJAX .', '2024-10-05'),
 (6, 'Elegance', 3, '#', 'blah', '2024-05-05'),
 (11, 'B', 5, 'B B ', '   GG', '2022-02-22'),
-(12, 'g', 1, '#', 'h', '1999-06-06');
+(12, 'g', 1, '#', 'h', '1999-06-06'),
+(13, 'g', 1, '#', 'h', '1999-06-06'),
+(16, '566', 1, '#', 'xc,askx ', '2024-05-05');
 
 -- --------------------------------------------------------
 
@@ -136,7 +138,15 @@ INSERT INTO `portfolio_images` (`id`, `portfolio_id`, `image`, `is_cover`) VALUE
 (29, 12, 'uploads/1732723186_Screenshot (77).png', 1),
 (30, 12, 'uploads/1732723186_Screenshot (80).png', 0),
 (31, 12, 'uploads/1732723186_Screenshot (79).png', 0),
-(32, 12, 'uploads/1732723186_Screenshot (78).png', 0);
+(32, 12, 'uploads/1732723186_Screenshot (78).png', 0),
+(33, 13, 'uploads/1732778276_Screenshot (77).png', 1),
+(34, 13, 'uploads/1732778276_Screenshot (80).png', 0),
+(35, 13, 'uploads/1732778276_Screenshot (79).png', 0),
+(36, 13, 'uploads/1732778276_Screenshot (78).png', 0),
+(37, 16, 'uploads/1732779037_Screenshot (78).png', 1),
+(38, 16, 'uploads/1732779037_screenshot (7).png', 0),
+(39, 16, 'uploads/1732779037_modified_image (9).png', 0),
+(40, 16, 'uploads/1732779037_modified_image (8).png', 0);
 
 --
 -- Indexes for dumped tables
@@ -200,13 +210,13 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `portfolio`
 --
 ALTER TABLE `portfolio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `portfolio_images`
 --
 ALTER TABLE `portfolio_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- Constraints for dumped tables
