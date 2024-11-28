@@ -6,7 +6,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="./assets/img/portfolo-bg.jpeg" alt="" data-aos="fade-in">
+      <img src="./assets/img/portfolo-bg.jpeg" alt="Portfolio background" data-aos="fade-in">
 
       <div class="container" data-aos="zoom-out" data-aos-delay="100">
          <h2>Muhammad Adil Khan</h2>

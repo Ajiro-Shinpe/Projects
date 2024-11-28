@@ -32,7 +32,7 @@
 
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="./assets/img/profile.png" class="img-fluid" alt="">
+            <img src="./assets/img/profile.png" class="img-fluid" alt="portfolio profile image">
           </div>
           <div class="col-lg-8 content">
             <h2>Full Stack Web Developer.</h2>

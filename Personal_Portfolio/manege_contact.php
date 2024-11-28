@@ -31,17 +31,41 @@ $result = mysqli_query($conn, $query);
     <title>Manage Contact Messages</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-<div class="container mt-5">
+<body class="bg-dark text-white">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="./Admin.php">Admin Panel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./manege_projects.php">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./manege_category.php">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./manege_contact.php">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="logout.php">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container mt-5 bg-dark">
     <h2 class="text-center mb-4">Manage Contact Messages</h2>
 
     <!-- Contact Messages Table -->
-    <div class="card">
-        <div class="card-body">
+    <div class="card bg-dark text-white">
+        <div class="card-body bg-dark border rounded">
             <div class="table-responsive">
-                <table class="table table-striped align-middle">
-                    <thead class="table-light">
-                        <tr>
+                <table class="table table-dark table-striped align-middle">
+                    <thead class="table-dark">
+                        <tr class="table-dark">
                             <th scope="col">#</th>
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
@@ -50,15 +74,15 @@ $result = mysqli_query($conn, $query);
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="table-dark">
                         <?php if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) { ?>
                                 <tr>
-                                    <td><?php echo $row['id']; ?></td>
-                                    <td class="text-wrap"><?php echo htmlspecialchars($row['name']); ?></td>
-                                    <td class="text-wrap"><?php echo htmlspecialchars($row['email']); ?></td>
-                                    <td class="text-wrap"><?php echo htmlspecialchars($row['subject']); ?></td>
-                                    <td class="text-wrap"><?php echo nl2br(htmlspecialchars($row['msg'])); ?></td>
+                                    <td class="table-dark"><?php echo $row['id']; ?></td>
+                                    <td class="table-dark text-wrap"><?php echo htmlspecialchars($row['name']); ?></td>
+                                    <td class="text-wrap table-dark"><?php echo htmlspecialchars($row['email']); ?></td>
+                                    <td class="text-wrap table-dark"><?php echo htmlspecialchars($row['subject']); ?></td>
+                                    <td class="text-wrap table-dark"><?php echo nl2br(htmlspecialchars($row['msg'])); ?></td>
                                     <td>
                                         <!-- Delete button for each contact -->
                                         <a href="?delete=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" 
