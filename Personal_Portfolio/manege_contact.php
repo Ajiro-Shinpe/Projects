@@ -23,7 +23,6 @@ if (isset($_GET['delete'])) {
 $query = "SELECT * FROM contact ORDER BY date DESC";  // Adjust the date column if needed
 $result = mysqli_query($conn, $query);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,41 +38,47 @@ $result = mysqli_query($conn, $query);
     <!-- Contact Messages Table -->
     <div class="card">
         <div class="card-body">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Subject</th>
-                        <th>Message</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) { ?>
-                            <tr>
-                                <td><?php echo $row['id']; ?></td>
-                                <td><?php echo htmlspecialchars($row['name']); ?></td>
-                                <td><?php echo htmlspecialchars($row['email']); ?></td>
-                                <td><?php echo htmlspecialchars($row['subject']); ?></td>
-                                <td><?php echo nl2br(htmlspecialchars($row['msg'])); ?></td>
-                                <td>
-                                    <!-- Delete button for each contact -->
-                                    <a href="?delete=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this message?')">Delete</a>
-                                </td>
-                            </tr>
-                        <?php }
-                    } else { ?>
+            <div class="table-responsive">
+                <table class="table table-striped align-middle">
+                    <thead class="table-light">
                         <tr>
-                            <td colspan="6" class="text-center">No messages found</td>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Subject</th>
+                            <th scope="col">Message</th>
+                            <th scope="col">Actions</th>
                         </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <?php if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) { ?>
+                                <tr>
+                                    <td><?php echo $row['id']; ?></td>
+                                    <td class="text-wrap"><?php echo htmlspecialchars($row['name']); ?></td>
+                                    <td class="text-wrap"><?php echo htmlspecialchars($row['email']); ?></td>
+                                    <td class="text-wrap"><?php echo htmlspecialchars($row['subject']); ?></td>
+                                    <td class="text-wrap"><?php echo nl2br(htmlspecialchars($row['msg'])); ?></td>
+                                    <td>
+                                        <!-- Delete button for each contact -->
+                                        <a href="?delete=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" 
+                                           onclick="return confirm('Are you sure you want to delete this message?')">
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php }
+                        } else { ?>
+                            <tr>
+                                <td colspan="6" class="text-center">No messages found</td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

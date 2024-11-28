@@ -103,77 +103,89 @@ $projects = $conn->query("SELECT * FROM portfolio ORDER BY date DESC");
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container mt-5">
+<div class="container-fluid mt-5">
     <h2 class="text-center mb-4">Manage Projects</h2>
 
     <!-- Add Portfolio Form -->
     <div class="card mb-4">
         <div class="card-body">
-            <h4>Add Portfolio</h4>
+            <h4 class="mb-3">Add Portfolio</h4>
             <form method="POST" enctype="multipart/form-data">
-                <div class="mb-3">
-                    <label for="title" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="title" name="title" required>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="category" class="form-label">Category</label>
+                        <select class="form-select" id="category" name="category" required>
+                            <option value="" disabled selected>Choose a category</option>
+                            <?php
+                            $cat_result = $conn->query("SELECT * FROM category");
+                            while ($cat = $cat_result->fetch_assoc()) {
+                                echo "<option value='{$cat['id']}'>{$cat['name']}</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="category" class="form-label">Category</label>
-                    <select class="form-select" id="category" name="category" required>
-                        <option value="" disabled selected>Choose a category</option>
-                        <?php
-                        $cat_result = $conn->query("SELECT * FROM category");
-                        while ($cat = $cat_result->fetch_assoc()) {
-                            echo "<option value='{$cat['id']}'>{$cat['name']}</option>";
-                        }
-                        ?>
-                    </select>
+                <div class="row g-3 mt-3">
+                    <div class="col-md-6">
+                        <label for="url" class="form-label">Project URL</label>
+                        <input type="text" class="form-control" id="url" name="url" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="date" class="form-label">Completion Date</label>
+                        <input type="date" class="form-control" id="date" name="date" required>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="url" class="form-label">Project URL</label>
-                    <input type="text" class="form-control" id="url" name="url" required>
+                <div class="row g-3 mt-3">
+                    <div class="col-md-12">
+                        <label for="desc" class="form-label">Description</label>
+                        <textarea class="form-control" id="desc" name="desc" rows="3" required></textarea>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="desc" class="form-label">Description</label>
-                    <textarea class="form-control" id="desc" name="desc" rows="3" required></textarea>
+                <div class="row g-3 mt-3">
+                    <div class="col-md-6">
+                        <label for="cover_image" class="form-label">Cover Image</label>
+                        <input type="file" class="form-control" id="cover_image" name="cover_image" accept="image/*" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="images" class="form-label">Additional Images</label>
+                        <input type="file" class="form-control" id="images" name="images[]" accept="image/*" multiple>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="date" class="form-label">Completion Date</label>
-                    <input type="date" class="form-control" id="date" name="date" required>
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
                 </div>
-                <div class="mb-3">
-                    <label for="cover_image" class="form-label">Cover Image</label>
-                    <input type="file" class="form-control" id="cover_image" name="cover_image" accept="image/*" required>
-                </div>
-                <div class="mb-3">
-                    <label for="images" class="form-label">Additional Images</label>
-                    <input type="file" class="form-control" id="images" name="images[]" accept="image/*" multiple>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Submit</button>
             </form>
         </div>
     </div>
 
-    <!-- Project List -->
-    <table class="table table-bordered">
-        <thead>
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped align-middle">
+        <thead class="table-light">
         <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>URL</th>
-            <th>Date</th>
-            <th>Actions</th>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Category</th>
+            <th scope="col">URL</th>
+            <th scope="col">Date</th>
+            <th scope="col">Actions</th>
         </tr>
         </thead>
         <tbody>
         <?php while ($project = $projects->fetch_assoc()) { ?>
             <tr>
                 <td><?php echo $project['id']; ?></td>
-                <td><?php echo $project['title']; ?></td>
-                <td><?php echo $project['category']; ?></td>
-                <td><a href="<?php echo $project['url']; ?>" target="_blank">View</a></td>
-                <td><?php echo $project['date']; ?></td>
+                <td class="text-wrap"><?php echo $project['title']; ?></td>
+                <td class="text-wrap"><?php echo $project['category']; ?></td>
                 <td>
-                    <a href="?edit=<?php echo $project['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="<?php echo $project['url']; ?>" target="_blank" class="text-truncate" style="max-width: 200px; display: inline-block;"><?php echo $project['url']; ?></a>
+                </td>
+                <td><?php echo $project['date']; ?></td>
+                <td class="d-flex gap-2">
+                    <a href="./edit_portfolio.php?edit=<?php echo $project['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
                     <a href="?delete=<?php echo $project['id']; ?>" class="btn btn-danger btn-sm"
                        onclick="return confirm('Are you sure you want to delete this project?');">Delete</a>
                 </td>
@@ -182,12 +194,8 @@ $projects = $conn->query("SELECT * FROM portfolio ORDER BY date DESC");
         </tbody>
     </table>
 </div>
-<script>
-    // Edit logic
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('edit')) {
-        alert("Edit functionality not yet implemented!");
-    }
-</script>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

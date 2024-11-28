@@ -62,19 +62,30 @@ $portfolio_run = mysqli_query($conn, $sql);
 
 if ($portfolio_run && $portfolio_run->num_rows > 0) {
 while ($portfolio_data = mysqli_fetch_assoc($portfolio_run)) {
-    ?>
-    <div class="col-lg-4 col-md-6 portfolio-item isotope-item <?= $portfolio_data['category_name']; ?>">
-        <div class="portfolio-content h-100">
-            <img src="<?= $portfolio_data['cover_image']; ?>" class="img-fluid" alt="">
-            <div class="portfolio-info">
-                <h4><?= $portfolio_data['title']; ?></h4>
-                <p><?= $portfolio_data['category_name']; ?></p>
-                <a href="<?= $portfolio_data['cover_image']; ?>" title="<?= $portfolio_data['title']; ?>" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="./portfolio-details.php?portfolio_id=<?= $portfolio_data['id']; ?>" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-
-            </div>
+    ?><div class="col-lg-4 col-md-6 portfolio-item isotope-item <?= $portfolio_data['category_name']; ?>">
+    <div class="portfolio-content h-100" >
+        <img src="<?= $portfolio_data['cover_image']; ?>" 
+             class="img-fluid" 
+             alt="<?= $portfolio_data['title']; ?>" 
+             loading="lazy"  style="height: 100%;width: 100%; aspect-ratio:4/3; object-fit:cover;">
+        <div class="portfolio-info">
+            <h4><?= $portfolio_data['title']; ?></h4>
+            <p><?= $portfolio_data['category_name']; ?></p>
+            <a href="<?= $portfolio_data['cover_image']; ?>" 
+               title="<?= $portfolio_data['title']; ?>" 
+               data-gallery="portfolio-gallery-app" 
+               class="glightbox preview-link">
+               <i class="bi bi-zoom-in"></i>
+            </a>
+            <a href="./portfolio-details.php?portfolio_id=<?= $portfolio_data['id']; ?>" 
+               title="More Details" 
+               class="details-link">
+               <i class="bi bi-link-45deg"></i>
+            </a>
         </div>
     </div>
+</div>
+
     <?php
 }
 } else {

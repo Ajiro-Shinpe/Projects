@@ -91,19 +91,21 @@ if (!$portfolio_images) {
 
           <div class="swiper-wrapper align-items-center">
               <br />
-              <?php
-              if (isset($portfolio_images) && !empty($portfolio_images)) {
-                  // Loop through all images
-                  foreach ($portfolio_images as $image) {
-                      // Check if 'image' exists and display it, otherwise use a default image
-                      $imgSrc = isset($image['image']) ? $image['image'] : 'default-image.jpg';
-                      echo "<div class='swiper-slide'><img src='" . htmlspecialchars($imgSrc) . "' alt='Portfolio Image'></div>";
-                  }
-              } else {
-                  // Fallback if no images exist
-                  echo "<div class='swiper-slide'><img src='default-image.jpg' alt='No Images Available'></div>";
-              }
-              ?>
+<?php if (isset($portfolio_images) && !empty($portfolio_images)) : ?>
+    <?php foreach ($portfolio_images as $image) : ?>
+        <?php
+            $imgSrc = isset($image['image']) ? $image['image'] : 'default-image.jpg';
+            $imgSrc = htmlspecialchars($imgSrc);
+        ?>
+        <div class="swiper-slide">
+            <img src="<?php echo $imgSrc; ?>" alt="Portfolio Image" class="img-fluid" style="height: 600px;width: 100%; aspect-ratio:1/6; object-fit:contain;" loading="lazy">
+        </div>
+    <?php endforeach; ?>
+<?php else : ?>
+    <div class="swiper-slide">
+        <img src="default-image.jpg" alt="No Images Available">
+    </div>
+<?php endif; ?>
             <!-- Swiper pagination -->
           </div>
           <div class="swiper-pagination"></div>

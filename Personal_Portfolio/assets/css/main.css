@@ -1239,14 +1239,22 @@ section,
     margin: 0 5px;
   }
 }
-
 .portfolio .portfolio-content {
   position: relative;
   overflow: hidden;
+  background: #f8f8f8; /* Optional background for better contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; /* Optional: rounded corners */
 }
 
 .portfolio .portfolio-content img {
   transition: 0.3s;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  aspect-ratio: 1/1; /* Ensures a square container */
 }
 
 .portfolio .portfolio-content .portfolio-info {
