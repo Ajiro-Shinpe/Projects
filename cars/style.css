@@ -1,0 +1,41 @@
+.bg {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: sticky;
+}
+
+@media only screen and (max-width: 600px) {
+    .bg {
+      background-image: url(/img/ford-mustang-vector-image-1440x2560.jpg);
+    }
+  }
+  
+nav {
+    background: transparent;
+}
+
+section {
+    padding: 20px 10px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 500px;
+    aspect-ratio: 3/2;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: black;
+}
